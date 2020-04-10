@@ -1,7 +1,7 @@
 let
   quasi-params = (builtins.fetchGit {
     url = "https://github.com/maybevoid/quasi-params.git";
-    rev = "54e87a5316094266a796bbed22afa7a8f94146d7";
+    rev = "8eedfff99898a57c664ad7f2f9348ff255e87764";
   }) + /quasi-params;
 
   casimir = (builtins.fetchGit {
@@ -11,11 +11,13 @@ let
 
   dabble = (builtins.fetchGit {
     url = "https://github.com/maybevoid/dabble.git";
-    rev = "1276a9e522975b3cfd1879651dfb79f4a527b47c";
+    rev = "c6e8371b68b756da5319015431f55212f63b19b3";
   }) + /dabble;
 
 in
 { inherit
     quasi-params
-    casimir;
+    casimir
+    dabble
+  ;
 }
