@@ -1,7 +1,7 @@
 let
   quasi-params = (builtins.fetchGit {
     url = "https://github.com/maybevoid/quasi-params.git";
-    rev = "3e2332aa2a380e1d6bc7bc226cf50819b2e3cfd5";
+    rev = "54e87a5316094266a796bbed22afa7a8f94146d7";
   }) + /quasi-params;
 
   casimir = (builtins.fetchGit {

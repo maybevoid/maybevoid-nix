@@ -1,4 +1,4 @@
-{ nixpkg }:
+{ nixpkgs }:
 let
   inherit (nixpkgs) pkgs stdenv;
 
