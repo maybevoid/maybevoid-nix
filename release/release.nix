@@ -23,12 +23,14 @@ let
     };
 
   shells = {
+    dabble = makePackageShell "dabble";
     casimir = makePackageShell "casimir";
     quasi-params = makePackageShell "quasi-params";
     manual = manual-shell;
   };
 
   builds = {
+    dabble = haskellPackages-2.dabble;
     casimir = haskellPackages-2.casimir;
     quasi-params = haskellPackages-2.quasi-params;
   };

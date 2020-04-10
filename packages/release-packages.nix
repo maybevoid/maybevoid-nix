@@ -24,6 +24,12 @@ let
           source.casimir
           {}
         ;
+
+        dabble = super.callCabal2nix
+          "dabble"
+          source.dabble
+          {}
+        ;
       });
   });
 
