@@ -7,11 +7,13 @@ let
 
   run-deps = import ./run-deps.nix
     { inherit nixpkgs haskellPackages; };
+
+  release = pkgs.haskell.lib.doBenchmark
+    (haskellPackages.${name});
 in
-haskellPackages.shellFor {
-  name = "nix-shell";
-
-  packages = ps: [ ps.${name} ];
-
+pkgs.mkShell {
+  name = "shell";
+  LANG = "en_US.UTF-8";
+  inputsFrom = [ release.env ];
   buildInputs = run-deps;
 }

@@ -19,10 +19,12 @@ let
           {}
         ;
 
-        casimir = super.callCabal2nix
-          "casimir"
-          source.casimir
-          {}
+        casimir = haskellLib.doBenchmark
+          ( super.callCabal2nix
+              "casimir"
+              source.casimir
+              {}
+          )
         ;
 
         dabble = super.callCabal2nix
