@@ -1,8 +1,8 @@
 let
   quasi-params = (builtins.fetchGit {
     url = "https://github.com/maybevoid/quasi-params.git";
-    rev = "8eedfff99898a57c664ad7f2f9348ff255e87764";
-  }) + /quasi-params;
+    rev = "5156727c4ec85ddaae7942840f5e42de884a1950";
+  });
 
   casimir = (builtins.fetchGit {
     url = "https://github.com/maybevoid/casimir.git";

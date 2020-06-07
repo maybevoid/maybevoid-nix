@@ -9,7 +9,8 @@ let
     { inherit nixpkgs haskellPackages; };
 
   release = pkgs.haskell.lib.doBenchmark
-    (haskellPackages.${name});
+    (pkgs.haskell.lib.doCheck
+      (haskellPackages.${name}) );
 in
 pkgs.mkShell {
   name = "shell";

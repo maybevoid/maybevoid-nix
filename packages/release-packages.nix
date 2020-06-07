@@ -15,7 +15,13 @@ let
 
         quasi-params = super.callCabal2nix
           "quasi-params"
-          source.quasi-params
+          (source.quasi-params + /quasi-params)
+          {}
+        ;
+
+        quasi-params-multi = super.callCabal2nix
+          "quasi-params-multi"
+          (source.quasi-params + /quasi-params-multi)
           {}
         ;
 
